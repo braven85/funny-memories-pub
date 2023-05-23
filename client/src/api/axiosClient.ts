@@ -1,7 +1,8 @@
 import axios from 'axios';
 import queryString from 'query-string';
 
-const baseURL = 'http://localhost:5000/api/';
+const baseURL = 'http://funny-memories-pub-api.vercel.app/api/';
+// const baseURL = 'http://localhost:5000/api/';
 
 const axiosClient = axios.create({
   baseURL,
