@@ -171,19 +171,19 @@ const NewMemoryModal = () => {
         <div className='flex justify-evenly w-[90%] md:w-[80%] min-w-[260px]'>
           {optionValue.optionValue === 'chris' || update.updatingMemory.child === 'chris' ? (
             <Button chris form type='submit'>
-              Send
+              Add a memory
             </Button>
           ) : optionValue.optionValue === 'stewie' || update.updatingMemory.child === 'stewie' ? (
             <Button stewie form type='submit'>
-              Send
+              Add a memory
             </Button>
           ) : optionValue.optionValue === 'meg' || update.updatingMemory.child === 'meg' ? (
             <Button meg form type='submit'>
-              Send
+              Add a memory
             </Button>
           ) : (
             <Button black form type='submit'>
-              Send
+              Add a memory
             </Button>
           )}
           <Button
