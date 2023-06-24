@@ -3,6 +3,7 @@ import useMemoryContent from '../../hooks/useMemoryContent';
 import { ChangeEvent } from 'react';
 import useOptionValue from '../../hooks/useOptionValue';
 import useUpdateMemory from '../../hooks/useUpdateMemory';
+import TextareaAutosize from '@mui/base/TextareaAutosize';
 
 interface MemoryContentProps {
   id: string;
@@ -36,12 +37,13 @@ const MemoryContent: React.FC<MemoryContentProps> = ({
 
   return (
     <div className='w-[90%] md:w-[80%] min-w-[260px] h-auto relative'>
-      <textarea
+      <TextareaAutosize
         id={id}
         disabled={disabled}
         defaultValue={update.isUpdating ? update.updatingMemory.content : content.content}
         {...register(id, { required, onChange: e => handleContentChange(e) })}
-        rows={12}
+        minRows={2}
+        maxRows={8}
         placeholder='Memory:'
         className={`
           peer text-base md:text-lg lg:text-xl w-full p-4 font-normal bg-white border-2 rounded-md

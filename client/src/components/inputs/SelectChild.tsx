@@ -91,9 +91,9 @@ const SelectChild: React.FC<SelectChildProps> = ({ id, disabled, required, regis
         {errors[id]
           ? 'You have to choose a child'
           : `${
-              optionValue.optionValue === '' || update.updatingMemory.child === ''
-                ? 'Choose a child:'
-                : 'You chose:'
+              optionValue.optionValue !== '' || update.updatingMemory.child !== ''
+                ? 'You have chosen:'
+                : 'Choose a child:'
             }`}
       </label>
     </div>
